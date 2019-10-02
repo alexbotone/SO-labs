@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function pelink(a){
+  	a.innerHTML="Alex Botone";
+  }
+  function inaltaparte(b){
+  	b.innerHTML="facebook";
+  }
+
+
+  </script>
+<link rel="stylesheet" type="text/css" href="/f/mystyle.css">
+</head>
+<body class="centered-wrapper">
+  <div class="scrollmenu">
+    <a href="/index">Home</a>
+    <a href="/cursuri">Cursuri</a>
+    <a href="/contact">Contact us</a>
+    <a href="/about">Locate us</a>
+    <a href="/form">Let us a review</a>
+    <a href="/joc">Joc</a>
+
+  </div>
+    <form method=POST action="/confirmare">
+        <h1>Verificați datele introduse: </h1>
+        <strong> Nume: </strong> <input type="text" name="nume"  value="<%=fdata.nume %>"><br>
+        <strong> Prenume: </strong> <input type="text" name="prenume" value="<%=fdata.prenume %>"><br>
+        <strong> Varsta: </strong> <input type="number" name="varsta" value="<%=fdata.varsta %>"><br>
+        <strong> Email: </strong> <input type="email" name="email"  value="<%=fdata.email %>"><br>
+        <strong> Review: </strong> <textarea name="review" rows="6" cols="80" value="<%=fdata.review%>"></textarea><br>
+      <input type="submit" value="Confirm">
+    </form>
+    <div class="footer">
+    <a href="https://www.facebook.com/alexbotone" onmouseover="pelink(this)" onmouseout="inaltaparte(this)" style="text-decoration:none"> facebook </a>
+    <p>Bulevardul 21 Decembrie 1989 138, Cluj-Napoca 400000</p>
+    <script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+    dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+    mm = '0' + mm;
+    }
+
+    today = dd + '/' + mm + '/' + yyyy;
+    document.write(today);
+    </script>
+    </div>
+</body>
+</html>

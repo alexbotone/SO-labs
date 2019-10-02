@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="/f/mystyle.css">
+<script>
+function mousepeste(a){
+a.src="f/2.jpg";
+}
+function incarcarepoza(c){
+c.src="f/1.jpg";
+}
+function numousepeste(b){
+b.src="f/1.jpg";
+}
+function pelink(a){
+	a.innerHTML="Alex Botone";
+}
+function inaltaparte(b){
+	b.innerHTML="facebook";
+}
+
+
+</script>
+
+
+</head>
+
+<body class="centered-wrapper">
+
+<div class="scrollmenu">
+  <a href="/index">Home</a>
+  <a href="/cursuri">Cursuri</a>
+  <a href="/contact">Contact us</a>
+  <a href="/about">Locate us</a>
+  <a href="/form">Let us a review</a>
+  <a href="/joc">Joc</a>
+
+</div>
+
+<h1>Bine ati venit la Cursul Dorit</h1>
+<img  class="primapoza"src="f/1.jpg"  onmouseout="numousepeste(this)" onmouseover="mousepeste(this)" </img>
+<p class="textuldeinceput">Centrul de formare profesională <strong>Cursul dorit </strong>şi-a propus calificarea,
+   perfecţionarea şi dezvoltarea factorului uman, regăsit într-un sistem economic aflat într-o accelerată şi continuă
+   evoluţie.<br> La noi gasiti cele mai noi, utile si cautate cursuri de pe piata, cu traineri specializati si cautati in toata lumea.
+ Va punem la dispozitie o gama larga de cursuri din toate domeniile. Clientii au descoperit ce frumoasa e munca, dupa ce au urmat cursurile noastre.</p>
+<br><br><p class="furnizor"><strong> FURNIZOR DE FORMARE PROFESIONALA AUTORIZAT:</strong><br>
+  <img src="f/3.png"> </img>
+  <div class="footer">
+  <a href="https://www.facebook.com/alexbotone" onmouseover="pelink(this)" onmouseout="inaltaparte(this)" style="text-decoration:none"> facebook </a>
+  <p>Bulevardul 21 Decembrie 1989 138, Cluj-Napoca 400000</p>
+  <script>
+  var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+if (dd < 10) {
+  dd = '0' + dd;
+}
+
+if (mm < 10) {
+  mm = '0' + mm;
+}
+
+today = dd + '/' + mm + '/' + yyyy;
+document.write(today);
+</script>
+</div>
+</body>
+</html>

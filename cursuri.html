@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function pelink(a){
+  	a.innerHTML="Alex Botone";
+  }
+  function inaltaparte(b){
+  	b.innerHTML="facebook";
+  }
+
+
+  </script>
+<link rel="stylesheet" type="text/css" href="/f/mystyle.css">
+</head>
+
+<body class="centered-wrapper">
+  <div class="scrollmenu">
+    <a href="/index">Home</a>
+    <a href="/cursuri">Cursuri</a>
+    <a href="/contact">Contact us</a>
+    <a href="/about">Locate us</a>
+    <a href="/form">Let us a review</a>
+    <a href="/joc">Joc</a>
+
+  </div>
+   <header>
+      <h1>
+         Cursuri 2019
+      </h1>
+   </header>
+
+   <article>
+      <form>
+
+		 <fieldset id="info">
+		 <fieldset >
+		 <legend>Cursuri disponibile</legend>
+		 <input type="checkbox" id="item1" value="1500" />
+         <label for="item1">Curs Bucatar(1500 RON)</label>
+         <br><input type="checkbox" id="item2" value="2500" />
+         <label for="item2">Curs Cotabilitate(2500 RON) </label>
+        <br> <input type="checkbox" id="item3" value="1700" />
+         <label for="item3">Curs Mecanic auto (1700 RON)</label>
+        <br> <input type="checkbox" id="item4" value="1500" />
+         <label for="item4">Curs Frizer (1500 RON)</label>
+        <br> <input type="checkbox" id="item5" value="1300" />
+         <label for="item5">Curs Ospatar (1300 RON)</label>
+         <br> <input type="checkbox" id="item5" value="3300" />
+          <label for="item5">Curs Patiser (3300 RON)</label>
+          <br> <input type="checkbox" id="item5" value="2500" />
+           <label for="item5">Curs instalatii sanitare (2500 RON)</label>
+
+		 </fieldset>
+         <input type="button" value="Calcul " width="150%"; height="150%"; id="cButton" />
+
+
+
+      <table>
+         <colgroup>
+            <col class="label" />
+            <col class="amount" />
+         </colgroup>
+         <tbody>
+            <tr>
+               <td>Total</td>
+               <td>0.00</td>
+            </tr>
+            <tr>
+               <td>TVA</td>
+               <td>0.00</td>
+            </tr>
+            <tr>
+               <td>Total cu TVA</td>
+               <td>0.00</td>
+            </tr>
+         </tbody>
+      </table>
+	   </fieldset>
+	  </form>
+   </article>
+   <section>
+
+		 <div id="infoCurs">
+
+         </div>
+      </section>
+   <script>
+   function calculTotal() {
+let itemTotal = 0.0;
+let tax = 0.0;
+let totalWithTax = 0.0;
+
+let items = document.getElementsByTagName("input");
+
+let cells = document.getElementsByTagName("td");
+
+for (let i = 0; i < items.length; i++) {
+ if (items[i].type==="checkbox"&items[i].checked) {
+ itemTotal += (Number(items[i].value));
+ }
+ }
+
+tax=itemTotal*0.19;
+totalWithTax=itemTotal+tax;
+
+cells[1].innerHTML=itemTotal;
+cells[3].innerHTML=tax;
+cells[5].innerHTML=totalWithTax
+
+}//end of function
+
+let calcButton=document.getElementById("cButton");
+calcButton.addEventListener("click",calculTotal);
+
+function show(){console.log("success")};
+   </script>
+
+   <div class="footer">
+   <a href="https://www.facebook.com/alexbotone" onmouseover="pelink(this)" onmouseout="inaltaparte(this)" style="text-decoration:none"> facebook </a>
+   <p>Bulevardul 21 Decembrie 1989 138, Cluj-Napoca 400000</p>
+   <script>
+   var today = new Date();
+ var dd = today.getDate();
+ var mm = today.getMonth() + 1; //January is 0!
+ var yyyy = today.getFullYear();
+
+ if (dd < 10) {
+   dd = '0' + dd;
+ }
+
+ if (mm < 10) {
+   mm = '0' + mm;
+ }
+
+ today = dd + '/' + mm + '/' + yyyy;
+ document.write(today);
+ </script>
+ </div>
+
+
+</body>
+</html>
